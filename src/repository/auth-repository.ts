@@ -19,7 +19,7 @@ export class AuthRepository implements IAuthRepository {
             password,
             createdAt 
           FROM user 
-          WHERE email=? 
+          WHERE email = ? 
          `, [email]);
     return result[0] as User;
   }
