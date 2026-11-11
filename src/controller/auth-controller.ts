@@ -101,7 +101,7 @@ export class AuthController {
             });
 
             if (error) {
-                res.status(400).json({
+              return res.status(400).json({
                     message: "Validation error",
                     errors: error.details.map((detail) => detail.message),
                 });
