@@ -11,7 +11,6 @@ export class UserController {
     ) => {
         try {
             const userId = req.userId ?? 0; 
-            console.log(userId);
             const user = await this.userRepository.show(userId);
 
             if (!user) {
