@@ -41,6 +41,6 @@ export const authMiddleware = async (
         });
     } 
     
-    req.userId=acessTokenResult?.id;
+    req.userId=acessTokenResult?.userId;
     next();
 }

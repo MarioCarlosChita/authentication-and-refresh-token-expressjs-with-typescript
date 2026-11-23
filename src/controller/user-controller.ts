@@ -10,7 +10,8 @@ export class UserController {
         res: Response
     ) => {
         try {
-            const userId = req.userId ?? 0;
+            const userId = req.userId ?? 0; 
+            console.log(userId);
             const user = await this.userRepository.show(userId);
 
             if (!user) {
@@ -21,7 +22,8 @@ export class UserController {
             }
 
             return res.status(200).json({
-                user: {
+                user: { 
+                    id: user.id,
                     name: user.name,
                     email: user.email,
                     createAt: user.createdAt,
