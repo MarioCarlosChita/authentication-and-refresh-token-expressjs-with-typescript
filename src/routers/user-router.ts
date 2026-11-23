@@ -8,6 +8,6 @@ export function userRoutes(
     userController: UserController
 ): Router {
     const router = Router();
-    router.get('/:id', authMiddleware, userController.show);
+    router.get('/', authMiddleware, userController.show);
     return router;
 }

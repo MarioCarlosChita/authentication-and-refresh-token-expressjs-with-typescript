@@ -10,7 +10,7 @@ export class UserController {
         res: Response
     ) => {
         try {
-            const userId = Number(req.params.id);
+            const userId = req.userId ?? 0;
             const user = await this.userRepository.show(userId);
 
             if (!user) {

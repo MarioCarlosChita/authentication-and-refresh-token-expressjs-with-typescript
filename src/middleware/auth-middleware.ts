@@ -39,7 +39,8 @@ export const authMiddleware = async (
             message: "unauthorized",
             status: 401,
         });
-    }
-
+    } 
+    
+    req.userId=acessTokenResult?.id;
     next();
 }
